@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"br.dev.mtparreira.estudos.core"},{"l":"br.dev.mtparreira.estudos.estruturas"},{"l":"br.dev.mtparreira.estudos.estruturas.modelos"}];updateSearchResults();
