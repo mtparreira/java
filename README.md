@@ -1,6 +1,6 @@
 Projeto de estudos na linguagem Java.
 
-De livre utilização desde que referenciada a fonte.
+De livre utilização e reprodução, desde que referenciada a fonte.
 
-@mtparreira
+@mtparreira<br>
 mtparreira@gmail.com
