@@ -1,5 +1,12 @@
-Projeto de estudo na linguagem Java.<p>
-Cada pasta representa o repositório completo de um determinado projeto.<br>
-Conteúdo de livre utilização e reprodução, desde que referenciada a fonte.<p>
-@mtparreira<br>
-mtparreira@gmail.com
+Projeto de estudo na linguagem Java<p>
+Cada pasta representa o repositório completo de um determinado projeto<br>
+Conteúdo de livre utilização e reprodução, desde que referenciada a fonte<p>
+<b>@mtparreira</b><br>
+mtparreira@gmail.com<p>
+<b>Exemplos</b><br>
+Arquivos de Configurações<br>
+Arquivos de Propriedades<br>
+Serialização<p>
+<b>Testes</b><br>
+Fila<br>
+Pilha<br>
