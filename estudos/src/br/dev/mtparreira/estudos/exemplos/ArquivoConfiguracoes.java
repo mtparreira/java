@@ -73,7 +73,8 @@ public class ArquivoConfiguracoes {
 			}
 			contador++;
 		}
-		scn.close();
+		contador--;
+		scn.close();		
 		System.out.println(" -------------------------------------------");
 		System.out.println(" Quantidade de linhas: " + contador);
 		processamento = System.currentTimeMillis() -  processamento;

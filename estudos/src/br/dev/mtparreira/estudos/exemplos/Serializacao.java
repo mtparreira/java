@@ -121,9 +121,7 @@ class Identificacao implements Serializable {
 	
 	private String cracha, cpf;
 	
-	public Identificacao() {
-		
-	}
+	public Identificacao() {}
 	
 	public Identificacao(final String cracha, final String cpf) {
 		this.setCracha(cracha);

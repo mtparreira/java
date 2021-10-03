@@ -17,7 +17,7 @@ public class ExcecaoDetectada extends RuntimeException{
 	 * @param msg (String)
 	 * 
 	 */
-	public ExcecaoDetectada(String msg) {
+	public ExcecaoDetectada(final String msg) {
 		super(msg);
 	}
 

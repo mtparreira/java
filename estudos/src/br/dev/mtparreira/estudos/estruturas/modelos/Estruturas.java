@@ -15,6 +15,7 @@ public interface Estruturas {
 	 * Adiciona elemento na estrutura
 	 * 
 	 * @param elemento (Object)
+	 * 
 	 */
 	void adicionar(final Object elemento);
 	
@@ -22,6 +23,7 @@ public interface Estruturas {
 	 * Retira elemento na estrutura
 	 * 
 	 * @return Object
+	 * 
 	 */
 	Object retirar();
 	
@@ -30,6 +32,7 @@ public interface Estruturas {
 	 * Consulta elemento na estrutura
 	 * 
 	 * @return Object
+	 * 
 	 */
 	Object consultar();
 	
@@ -38,6 +41,7 @@ public interface Estruturas {
 	 * Verifica se a estrutura é válida
 	 * 
 	 * @return boolean
+	 * 
 	 */
 	boolean valida();
 	
@@ -46,6 +50,7 @@ public interface Estruturas {
 	 * Verifica se a estrutura está vazia
 	 * 
 	 * @return boolean
+	 * 
 	 */
 	boolean vazia();
 
@@ -53,6 +58,7 @@ public interface Estruturas {
 	 * Retorna a quantidade de elementos presentes na estrutura
 	 * 
 	 * @return int
+	 * 
 	 */
 	int quantidade();
 
