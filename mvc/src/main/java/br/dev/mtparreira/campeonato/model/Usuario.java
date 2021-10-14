@@ -5,9 +5,7 @@ public class Usuario {
 	private Integer id, tipo;
 	private String login, senha;
 	
-	public Usuario() {
-		
-	}
+	public Usuario() {}
 	
 	public Usuario(Integer id, String login, String senha, Integer tipo) {
 		this.id = id;
@@ -44,9 +42,9 @@ public class Usuario {
 //		return senha;
 //	}
 	
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+//	public void setSenha(String senha) {
+//		this.senha = senha;
+//	}
 	
 	public boolean senhaValida(String senha) {
 		return (this.senha.equals(senha));

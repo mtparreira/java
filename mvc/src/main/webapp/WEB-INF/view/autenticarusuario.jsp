@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:url value="/campeonato" var="endereco"/>
     
@@ -5,13 +6,12 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8">
 		<title>.:: CAMPEONATO ::.</title>
 	</head>
 
 	<body>
 	
-		<b>Autenticar Usu·rio:</b><br><br>
+		<b>Autenticar Usu√°rio:</b><br><br>
 		
 		<form action="${endereco}" method="post">
 		
@@ -20,11 +20,11 @@
 			
 			<input type="hidden" name="cmd" value="ValidarUsuario" />
 			
-			<input type="submit" />
+			<input type="submit" value="Entrar" />
 		
 		</form>
 		
-		<br><br>"${mensagem}"
+		<br>${mensagem}
 		
 	</body>
 

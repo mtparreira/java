@@ -8,7 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import br.dev.mtparreira.campeonato.ArquivosJSP;
 import br.dev.mtparreira.campeonato.Parametros;
 
 @WebServlet(name = "mvc", urlPatterns = "/campeonato")
@@ -21,6 +23,20 @@ public class Campeonato extends HttpServlet {
 		
     	String acao = "";
     	String comando = request.getParameter("cmd");
+    	
+    	HttpSession sessao = request.getSession();
+    	boolean usuarioAutenticado  = (sessao.getAttribute("identificacao") == null);
+    	boolean comandoAutenticacao = !(comando.equals("AutenticarUsuario") || comando.equals("ValidarUsuario"));
+    	if ((usuarioAutenticado && comandoAutenticacao) || (comando.equals("Logout")) || (comando.equals("Opcoes"))) {
+    		if (comando.equals("Opcoes")) {
+    			RequestDispatcher rd = request.getRequestDispatcher(Parametros.PASTA_JSP + ArquivosJSP.LISTAR_OPCOES.toString());
+        		rd.forward(request, response);
+    		} else {
+    			request.getSession().invalidate();
+    			response.sendRedirect(Parametros.INICIO.toString());
+    		}
+    		return;
+    	}
     	
     	try {
     		@SuppressWarnings("rawtypes")

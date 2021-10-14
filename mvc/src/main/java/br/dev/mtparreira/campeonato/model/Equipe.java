@@ -5,9 +5,7 @@ public class Equipe {
 	private Integer id;
 	private String descricao;
 	
-	public Equipe() {
-		
-	}
+	public Equipe() {}
 	
 	public Equipe(Integer id, String descricao) {
 		this.id = id;

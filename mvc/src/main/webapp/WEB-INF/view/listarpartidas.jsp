@@ -11,24 +11,16 @@
 
 	<body>
 	
-		<b>Equipes:</b><br>
+		<b>Partidas:</b><br>
 	
 		<ul>
-		<c:forEach items="${equipes}" var="equipe">
-			
-			<li>
-			${equipe.descricao}	
-			<c:if test="${identificacao.tipo == 0}">
-				<a href="${endereco}?cmd=MostrarEquipe&id=${equipe.id}">alterar</a>
-				<a href="${endereco}?cmd=RemoverEquipe&id=${equipe.id}">remover</a>
-			</c:if>	
-			</li>
-			
+		<c:forEach items="${partidas}" var="partida">			
+			<li>${partida.a.descricao} x ${partida.b.descricao}</li>			
 		</c:forEach>
 		</ul>
 		
-		<c:if test="${identificacao.tipo == 0}"><a href="${endereco}?cmd=MostrarEquipe&id=0">adicionar</a><br></c:if>	
-
+		<c:if test="${identificacao.tipo == 0}"><a href="${endereco}?cmd=SortearPartidas&sortear=1">sortear</a><br></c:if>		
+		
 		<a href="${endereco}?cmd=Opcoes">menu</a>
 		<a href="${endereco}?cmd=Logout">sair</a>
 

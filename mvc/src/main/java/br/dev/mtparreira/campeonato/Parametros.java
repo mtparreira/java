@@ -2,11 +2,12 @@ package br.dev.mtparreira.campeonato;
 
 public enum Parametros {
 
-	INICIO		("index.html"),
-	COMANDOS	("br.dev.mtparreira.campeonato.controller."),
-	PASTA_JSP	("WEB-INF/view/"),
-	ENCAMINHAR	("forward"),
-	REDIRECIONAR("redirect");
+	INICIO			("index.html"),
+	COMANDOS		("br.dev.mtparreira.campeonato.controller."),
+	PASTA_JSP		("WEB-INF/view/"),
+	ENCAMINHAR		("forward"),
+	REDIRECIONAR	("redirect"),
+	SESSAO_INVALIDA	("SESSAO:INVALIDA");
 	
 	private String valor;
 	

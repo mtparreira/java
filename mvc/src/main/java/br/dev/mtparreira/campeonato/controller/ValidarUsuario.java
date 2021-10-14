@@ -1,6 +1,7 @@
 package br.dev.mtparreira.campeonato.controller;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -26,9 +27,10 @@ public class ValidarUsuario implements Comando {
 		
 		HttpSession sessao = request.getSession();
 		if (usuario != null) {			
+			sessao.setAttribute("dia", new Date());
 			sessao.setAttribute("identificacao", usuario);
 			sessao.setAttribute("equipes", repositorio.getEquipes());
-			return (Parametros.ENCAMINHAR + ":" + ArquivosJSP.LISTAR_EQUIPES);
+			return (Parametros.ENCAMINHAR + ":" + ArquivosJSP.LISTAR_OPCOES);
 		} else {
 			sessao.setAttribute("mensagem", "Usuário não localizado!");
 			return (Parametros.ENCAMINHAR + ":" + ArquivosJSP.AUTENTICAR_USUARIO);
