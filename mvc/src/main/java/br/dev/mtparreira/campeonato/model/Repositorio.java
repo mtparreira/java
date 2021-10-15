@@ -23,10 +23,6 @@ public class Repositorio {
 				usuario = new Usuario(2, "demo", "demo", 1); usuarios.add(usuario);
 	}
 	
-	public List<Usuario> getUsuarios(){
-		return usuarios;
-	}
-	
 	public Usuario existeUsuario(String login, String senha) {
 		for (Usuario usuario: usuarios) {
 			if (usuario.getLogin().equals(login) && usuario.senhaValida(senha)) return usuario;
@@ -109,10 +105,7 @@ public class Repositorio {
 				partidas.add(partida);
 			}
 		}
-		if (partidas.size() > 0) {
-			Collections.shuffle(partidas);
-			Collections.shuffle(partidas);
-		}
+		if (partidas.size() > 0) Collections.shuffle(partidas);
 	}
 	
 }
