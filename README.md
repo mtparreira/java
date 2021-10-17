@@ -32,3 +32,7 @@ mtparreira@gmail.com
     <li>Uso de autenticação via session</li>    
     <li>Exemplo de webervice (json e xml)</li>
 </ul>
+<b>novelo</b>
+<ul>
+    <li>Simulação de leitua de arquivo usando Thread</li>
+</ul>
