@@ -1,8 +1,10 @@
-package br.dev.mtparreira.conexoes;
+package br.dev.mtparreira.conexoes.servidor;
 
 import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
+
+import br.dev.mtparreira.conexoes.util.Mensagens;
 
 public class Conectar implements Runnable {
 	
@@ -25,11 +27,12 @@ public class Conectar implements Runnable {
 			Boolean primeiro = true;
 			while (entrada.hasNextLine()) {
 				String comando = entrada.nextLine();
-				msg.imprimeInformacao(comando);
-				if (!primeiro) saida.println("comando recebido no servidor");
-				if (comando.contains("gatilho" )) {
+				msg.imprimeInformacao(comando);				
+				if (comando.contains("gatilho")) {
 					servico.parar();
 					break;
+				} else if (!primeiro) {
+					saida.println("comando recebido no servidor");
 				}
 				primeiro = false;
 			}		

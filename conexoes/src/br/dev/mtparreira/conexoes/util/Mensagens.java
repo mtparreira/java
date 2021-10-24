@@ -1,4 +1,4 @@
-package br.dev.mtparreira.conexoes;
+package br.dev.mtparreira.conexoes.util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -67,6 +67,7 @@ public class Mensagens {
 		if (cores) System.out.print(corCaractere);        
         System.out.println(rodape);
         if (cores) System.out.print(Cores.RESET);
+        System.exit(0); // necessario para finalizar threads UDP sem necessidade de uso de pool, future, etc
 	}
 	
 	public void imprimeInformacao(String mensagem) {

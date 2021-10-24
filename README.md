@@ -5,6 +5,15 @@ Conteúdo de livre utilização e reprodução, desde que referenciada a fonte
 <b>@mtparreira</b><br>
 mtparreira@gmail.com
 <p>
+<b>conexoes</b>
+<ul>
+    <li>Aplicação do tipo Cliente-Servidor</li>
+    <li>Utiliza Sockets</li>
+    <li>Utiliza protocolo TCP e UDP</li>
+    <li>Implementa solução de keep alive</li>
+    <li>Implementa log em tela</li>
+    <li>Implementa uma aplicação de cor para terminal</li>
+</ul>
 <b>estudos</b>
 <ul>
     <li>Java Básico

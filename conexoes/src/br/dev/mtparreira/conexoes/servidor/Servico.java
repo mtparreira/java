@@ -1,10 +1,12 @@
-package br.dev.mtparreira.conexoes;
+package br.dev.mtparreira.conexoes.servidor;
 
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import br.dev.mtparreira.conexoes.util.Mensagens;
 
 public class Servico {
 	
@@ -29,6 +31,7 @@ public class Servico {
 			conexoes = Executors.newCachedThreadPool();
 			rodando.set(true);
 			msg.imprimeInformacao("aguardando conexões externas");
+			msg.imprimeInformacao("comandos com a palavra 'GATILHO' finalizam o serviço");
 			escutar();
 		} catch (Exception e) {
 			msg.imprimeFalha("não foi possível iniciar o serviço: " + e.getMessage());

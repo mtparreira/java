@@ -1,4 +1,4 @@
-package br.dev.mtparreira.conexoes;
+package br.dev.mtparreira.conexoes.util;
 
 public enum Cores {
     

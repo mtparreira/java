@@ -1,8 +1,11 @@
-package br.dev.mtparreira.conexoes;
+package br.dev.mtparreira.conexoes.cliente;
 
 import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
+
+import br.dev.mtparreira.conexoes.util.Mensagens;
+import br.dev.mtparreira.conexoes.util.Processamento;
 
 public class Cliente {
 	
@@ -35,17 +38,30 @@ public class Cliente {
 			
 			Thread enviar = new Thread(new Runnable() {
 				@Override
-				public void run() {	
+				public void run() {
 					try {
+						NoAr controle = new NoAr();
 						Scanner teclado = new Scanner(System.in);
 						PrintStream saida = new PrintStream(conexao.getOutputStream());
-						msg.imprimeInformacao("digite comandos <ENTER> para encerrar");
+						msg.imprimeInformacao("comandos liberados, 'FIM' para encerrar");
+						msg.imprimeInformacao("digite comandos <ENTER>");
 						saida.println("conexão aceita para o cliente " + msg.getNome() + " na porta " + conexao.getLocalPort());
 						while(teclado.hasNextLine()) {
-							String valor = teclado.nextLine();
-							if (valor.trim().equals("")) break;
-							saida.println("cliente: " + msg.getNome() + " porta: " + conexao.getLocalPort() + " comando: " + valor);
-							if (valor.contains("gatilho")) break;
+							String valor = teclado.nextLine();							
+							if (valor.trim().toUpperCase().equals("FIM")) break;
+							saida.println("cliente: " + msg.getNome() + " porta: " + conexao.getLocalPort() + " comando: " + valor);							
+							if (valor.toLowerCase().equals("gatilho")) {
+								msg.imprimeAlerta("enviado comando de encerramento do serviço");
+								break;
+							}							
+							controle.setControle(false);
+							Thread tic = new Thread(new Tic(controle));
+							tic.start();
+							Processamento.simulacao(3);
+							if (!controle.getControle()) {
+								msg.imprimeFalha("conexão com o servidor perdida");
+								break;
+							}
 						}
 						saida.close();
 						teclado.close();
@@ -70,16 +86,16 @@ public class Cliente {
 					}					
 				}				
 			});
-			
+						
 			receber.start();
 			enviar.start();
 			enviar.join();
-			conexao.close();
 			
+			conexao.close();			
 			msg.imprimeInformacao("encerrando aplicação");
 			
 		} catch (Exception e) {
-			msg.imprimeAlerta("falha na conexão: " + e.getMessage());			
+			msg.imprimeFalha("falha na conexão: " + e.getMessage());			
 		}
 		
 		msg.imprimeRodape();    	
