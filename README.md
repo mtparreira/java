@@ -49,5 +49,5 @@ mtparreira@gmail.com
 </ul>
 <b>novelo</b>
 <ul>
-    <li>Simulação de leitua de arquivo usando Thread</li>
+    <li>Simulação de leitura de arquivo usando Thread</li>
 </ul>
