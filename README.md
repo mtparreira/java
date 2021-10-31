@@ -33,6 +33,12 @@ mtparreira@gmail.com
     <li>Teste de Fila</li>
     <li>Teste de Pilha</li>
 </ul>
+<b>jogos</b>
+<ul>
+    <li>Jogo Paredão</li>
+    <li>Uso de OpenGL</li>
+    <li>Maven com gerenciamento de projetos</li>
+</ul>
 <b>mvc</b>
 <ul>
     <li>Modelagem MVC</li>

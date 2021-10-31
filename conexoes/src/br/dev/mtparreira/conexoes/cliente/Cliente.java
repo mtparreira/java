@@ -19,7 +19,7 @@ public class Cliente {
 			case 1:
 				if (args[0].equals("--help") || args[0].equals("--h")) {
 					System.out.println("Cliente <nome> <cor>");
-					System.out.println("cor[verde,azul,ciana,rosa,branca]");
+					System.out.println("cor [verde,azul,ciana,rosa,branca]");
 					System.exit(0);
 				} else if (args[0].toLowerCase().equals("servidor")) {				
 					System.out.println("Nome da aplicação cliente não pode ser " + args[0]);
