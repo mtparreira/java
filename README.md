@@ -23,7 +23,7 @@ mtparreira@gmail.com
             <li>Interface</li>                        
             <li>Listas</li>
             <li>Formatação</li>
-            <li>java.io, java.util</li>
+            <li>java.io e java.util</li>
         </ul>        
     </li>
     <li>Arquivo de Configurações</li>
